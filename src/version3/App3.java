@@ -206,14 +206,9 @@ public class App3 {
 //        });
         //iterate through the Map and display the results
         int count = 0;
-
         for (Map.Entry<Double, Value> entry : map.entrySet()) {
-            if (count % 2 == 0) {
-                System.out.print(Color.WHITE_BRIGHT);
-            } else {
-                System.out.print(Color.WHITE);
-            }
             Value value = entry.getValue();
+            System.out.print(count % 2 == 0 ? Color.WHITE_BRIGHT : Color.WHITE);
             System.out.printf("%.1f" + from + " => %.1f" + to + (value.getOcc() > 1 ? " (%d)" : "") +
                     "\n", entry.getKey(), value.getTemp(), value.getOcc());
             count++;
